@@ -1,0 +1,18 @@
+{% block content %}
+	<h1>Categoria: {{categoria}}</h1>
+
+	<h2>Temas:</h2>
+
+	<ul>
+	{% for tema in tema %}
+		<li>
+			<a href="{% url 'roberts:contenido' tema.id %}">{{tema.text}}</a>
+		</li>
+
+	{% empty %}
+		<li>
+			Ooops!, No hay temas para esta categoría aún.
+		</li>
+	{% endfor %}	
+	</ul>
+{% endblock content %}

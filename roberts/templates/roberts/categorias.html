@@ -1,0 +1,13 @@
+{% block content %}
+    
+    <p>Categorias:</p>
+    <ul>
+    	{% for cats in cats %}
+    	  <li>
+    	  	<a href="{% url 'roberts:categoria' categoria.id %}"></a>{{cats}}
+    	  </li>
+    	{% empty %}
+    	  <li>No hay categorias xD</li>
+    	{% endfor%}
+    </ul>
+{% endblock content%}

@@ -1,0 +1,14 @@
+{% block content %}
+    
+    <p>Contenidos: {{contenido}}</p>
+    <ul>
+    	{% for contenido in contenidos %}
+    	  <li>
+            <p>{{ contenido.titulo | linebreaks }}</p>
+            <p>{{ contenido.script | linebreaks }}</p>
+    	  </li>
+    	{% empty %}
+    	  <li>No hay informacion</li>
+    	{% endfor%}
+    </ul>
+{% endblock content%}

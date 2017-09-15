@@ -1,0 +1,14 @@
+{% block content %}
+    
+    <p>Temas:</p>
+    <ul>
+    	{% for temas in temas %}
+    	  <li>
+    	  	{{temas.text | linebreaks}}
+    	  </li>
+    	{% empty %}
+    	  <li>No hay temas</li>
+    	{% endfor%}
+    </ul>
+    <a href="{% url 'roberts:new_tema' %}">Regresar</a>
+{% endblock content%}

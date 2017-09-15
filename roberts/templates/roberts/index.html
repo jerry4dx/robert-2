@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style type="text/css">body{background-color: #f1c40f;} *{color: #34495e;} .search{text-align: center;}.search-input--fullscreen {
+    background: none;
+    border: 1px, solid;
+    border-radius: 30px;
+    display: block;
+    font-size: 375%;
+    overflow: hidden;
+    resize: none;
+    white-space: pre-wrap;
+    width: 100%;
+    word-wrap: break-word;
+}
+.navbar {margin-bottom: 0px;
+border-radius: 0px;} .jumbotron {background-color: #e67e22;
+color: #fff;}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">NEORIS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index/">Inicio<span class="sr-only">(current)</span></a></li>
+        <li><a href="roberts/categoria/1/">Aplicaciones</a></li>
+        <li><a href="roberts/categoria/2/">Banner</a></li>
+        <li><a href="roberts/categoria/3/">Operaciones</a></li>
+        <li><a href="roberts/categoria/4/">Planeacion</a></li>
+        <li><a href="roberts/categoria/5/">Academico</a></li>
+    <!--    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li> -->
+      </ul>
+      
+    <!--  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul> -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="jumbotron">
+		<div class="container">
+				<h1>Robert - UDEM</h1>
+		<h2>Knowledge Management System</h2>	
+		</div>
+		</div>	
+<div class="container">
+<div class="row">
+	<div class="col-xl-12">
+	
+		
+	</div>
+	
+</div>
+	
+
+
+
+	<div class="search">
+		<form id="" action="{% url 'watson:search' %}" method="" accept-charset="utf-8">
+	<input class="search-input--fullscreen" type="text" placeholder="Buscar aqui" id="" name="q" value="{{request.GET.q}}">
+	<input type="submit" name="" value="Go">
+</form>
+	</div>
+
+
+
+<ul>
+	{% for categoria in categorias%}
+	  <li>{{ categoria }}</li>
+	{% endfor%}
+</ul>
+<ul>
+		
+</ul>
+</p>
+	
+</div>
+<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<p>Robert es un acronimo para:</p>
+		<p>Resource</p>
+		<p>Online</p>
+		<p>based on</p>
+		<p>efficient</p>
+		<p>resolution</p>
+		<p>tool</p>
+		<p>Recursos en línea basados en una herramienta de resolución eficiente</p>
+				</div>
+				<div class="col-md-6"></div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

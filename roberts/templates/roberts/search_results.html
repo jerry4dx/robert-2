@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% load watson %}
+<ul>
+    {% for result in search_results %}
+    <li>
+        <article>
+            <h1>
+                {% if result.url %}<a href="{{result.url}}">{% endif %}{{result.title}}{% if result.url %}</a>{% endif %}
+            </h1>
+            {% if result.title %}
+            <p>{{result.description}}</p>
+            {% else %}
+            <P>No hay</P>
+            {% endif %}
+        </article>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

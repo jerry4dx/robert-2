@@ -1,0 +1,14 @@
+{% block content %}
+<h2>Tema:{{tema}}</h2>
+<ul>
+{% for cont in contents %}
+	<li>
+		<h1>{{cont.titulo}}</h1>
+		<p>{{cont.script}}</p>	
+	</li>
+{% empty %}
+	<li>ujule!...</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}
